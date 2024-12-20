@@ -36,7 +36,7 @@ func main() {
 		Frameless:         false,
 		StartHidden:       false,
 		HideWindowOnClose: false,
-		BackgroundColour:  &options.RGBA{R: 255, G: 255, B: 255, A: 255},
+		// BackgroundColour:  &options.RGBA{R: 255, G: 255, B: 255, A: 0},
 		AssetServer:       &assetserver.Options{
 			Assets: assets,
 		},
@@ -47,16 +47,16 @@ func main() {
 		OnDomReady:        app.domReady,
 		OnBeforeClose:     app.beforeClose,
 		OnShutdown:        app.shutdown,
-		WindowStartState:  options.Normal,
+		WindowStartState:  options.Maximised,
 		Bind: []interface{}{
 			app,
 		},
 		// Windows platform specific options
 		Windows: &windows.Options{
-			WebviewIsTransparent: false,
-			WindowIsTranslucent:  false,
+			WebviewIsTransparent: true,
+			WindowIsTranslucent:  true,
 			DisableWindowIcon:    false,
-			// DisableFramelessWindowDecorations: false,
+			DisableFramelessWindowDecorations: true,
 			WebviewUserDataPath: "",
 			ZoomFactor: 1.0,
 		},
