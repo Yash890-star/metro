@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={jetBrains_Mono.className}>
+			<body className={`${jetBrains_Mono.className} theme`}>
 				<Providers>
 					{children}
 				</Providers>
