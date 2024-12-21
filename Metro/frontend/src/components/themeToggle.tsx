@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react";
-import Toggle from "./common/toggle";
 
 type theme = "light" | "dark"
 
@@ -30,7 +29,10 @@ const ThemeToggle = () => {
 
 	return (<>
 	<div className="mt-1 mr-1">
-		<Toggle onClickCallback={toggleTheme}/>
+		<div>
+			<input onClick={toggleTheme} type="checkbox" id="theme-toggle" className="hidden"/>
+			<label htmlFor="theme-toggle" className="theme-toggle"></label>
+		</div>
 	</div>
 	</>);
 }
